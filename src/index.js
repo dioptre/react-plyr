@@ -34,6 +34,7 @@ class Plyr extends Component {
       seek: true
     },
     duration: null,
+    html: null,
     displayDuration: true,
     storage: {
       enabled: true,
@@ -62,6 +63,7 @@ class Plyr extends Component {
     onVolumeChange: PropTypes.func,
 
     // plyr props
+    html : PropTypes.string,
     enabled: PropTypes.bool,
     controls: PropTypes.arrayOf(PropTypes.string),
     loadSprite: PropTypes.bool,
@@ -124,7 +126,8 @@ class Plyr extends Component {
       tooltips: this.props.tooltips,
       duration: this.props.duration,
       displayDuration: this.props.displayDuration,
-      storage: this.props.storage
+      storage: this.props.storage,
+      html: this.props.html // https://github.com/sampotts/plyr/blob/master/controls.md
     };
     
     this.player = plyr.setup('.react-plyr', options)[0];
