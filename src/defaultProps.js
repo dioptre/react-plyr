@@ -5,8 +5,6 @@ const defaultProps = {
   // Custom media title
   title: '',
 
-  html: null,
-
   // Logging to console
   debug: false,
 

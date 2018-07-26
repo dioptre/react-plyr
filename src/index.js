@@ -47,7 +47,6 @@ class Plyr extends Component {
     onCaptionsDisabled: PropTypes.func,
 
     // plyr props
-    html : PropTypes.string,
     enabled: PropTypes.bool,
     title: PropTypes.string,
     debug: PropTypes.bool,
@@ -107,7 +106,10 @@ class Plyr extends Component {
       enabled: PropTypes.bool,
       key: PropTypes.string
     }),
-    controls: PropTypes.arrayOf(PropTypes.string),
+    controls: PropTypes.oneOfType([
+      PropTypes.arrayOf(PropTypes.string),
+      PropTypes.string
+    ]),
     settings: PropTypes.arrayOf(PropTypes.string),
 
     poster: PropTypes.string,
